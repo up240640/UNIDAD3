@@ -4,19 +4,19 @@ print(type('Hello, World'))
 print (str(10))
 print(int('10'))
 print(float(10))
-input('Aldo Santiago Fernandez Gomez: ')
+input('Isaac Santos Verdeja: ')
 
 
-first_name = 'Aldo Santiago'
-last_name = 'Fernandez Gomez'
+first_name = 'isaac'
+last_name = 'santos verdeja'
 country = 'Mexico'
 city = 'Aguascalientes'
-age = 18
+age = 20
 is_married = False 
 Skills = ['Phython','work','sell everything']
 personal_info = {
-    'firstname':'Aldo Santiago',
-    'lastname':'Fernandez Gomez',
+    'firstname':'isaac',
+    'lastname':'santos verdeja',
     'country':'Mexico',
     'city':'Aguascalientes'
 }
