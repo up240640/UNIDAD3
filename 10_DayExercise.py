@@ -1,89 +1,64 @@
-age = int(input('Enter age: '))
-if age >= 18:
-    print("You are old enough to drive.")
-else:
-    print("You need to wait", 18 - age, "years.")
+print("Iterar de 0 a 10:")
+for i in range(11):
+    print(i)
 
-# 2
-my_age = 18
+i = 0
+while i <= 10:
+    print(i)
+    i += 1
 
-if age == my_age:
-    print("We are the same age")
-elif age > my_age:
-    print("You are", age - my_age, "years older than me")
-else:
-    print("I am", my_age - age, "years older than you")
+print("\nIterar de 10 a 0:")
+for i in range(10, -1, -1):
+    print(i)
 
-# 3
-a = int(input("Enter number: "))
-b = int(input("Enter number: "))
-if a > b:
-    print(a, "is greater than", b)
-elif a < b:
-    print(a, "is lesser than", b)
-else:
-    print("Both numbers are equal")
+i = 10
+while i >= 0:
+    print(i)
+    i -= 1
 
-# Level 2
-# 1
-score = int(input("Enter score: "))
+print("\nTriángulo:")
+for i in range(1, 8):
+    print("#" * i)
 
-grades = {}
-for i in range(90, 101):
-    grades[i] = 'A'
-for i in range(70, 90):
-    grades[i] = 'B'
-for i in range(60, 70):
-    grades[i] = 'C'
-for i in range(50, 60):
-    grades[i] = 'D'
-for i in range(0, 50):
-    grades[i] = 'F'
+print("\nCuadrícula:")
+for i in range(8):
+    for j in range(8):
+        print("#", end=" ")
+    print()
 
-print("Grade:", grades[score])
+print("\nPatrón multiplicado:")
+for i in range(11):
+    print(f"{i} x {i} = {i * i}")
 
-# 2
-month = input('Enter month: ').title()
-if month in ["September", "October", "November"]:
-    print("Autumn")
-if month in ["December", "January", "February"]:
-    print("Winter")
-if month in ["March", "April", "May"]:
-    print("Spring")
-else:
-    print("Summer")
+print("\nLista de elementos:")
+languages = ['Python', 'Numpy', 'Pandas', 'Django', 'Flask']
+for language in languages:
+    print(language)
 
-# 3
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruit = input('Enter fruit: ')
-print('That fruit already exists in the list' if fruit in fruits else fruits.append(fruit))
-print(fruits)
+print("\nNúmeros pares de 0 a 100:")
+for i in range(0, 101, 2):
+    print(i)
 
-# Level 3
-person = {
-    'first_name': 'Asabeneh',
-    'last_name': 'Yetayeh',
-    'age': 250,
-    'country': 'Finland',
-    'is_marred': True,
-    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address': {
-        'street': 'Space street',
-        'zipcode': '02210'
-    }
-}
+print("\nNúmeros impares de 0 a 100:")
+for i in range(1, 101, 2):
+    print(i)
 
-if person['skills']:
-    print(person['skills'][len(person['skills']) // 2])
-    print("Python" in person['skills'])
-    if ['Javascript', 'React'] == person['skills']:
-        print('Front End Developer')
-    elif ['Node', 'MongoDB', 'React'] == person['skills']:
-        print('Full Stack Developer')
-    else:
-        print("Unknown Title")
+print("\nSuma de todos los números de 0 a 100:")
+total_sum = sum(range(101))
+print(f"La suma de todos los números es: {total_sum}")
 
-if person['is_marred']:
-    print(person['first_name'], person['last_name'], "lives in", person['country'], ". He is married")
-else:
-    print(person['first_name'], person['last_name'], "lives in", person['country'], ". He is not married")
+even_sum = sum(i for i in range(101) if i % 2 == 0)
+odd_sum = sum(i for i in range(101) if i % 2 != 0)
+print(f"La suma de todos los pares es: {even_sum}")
+print(f"La suma de todos los impares es: {odd_sum}")
+
+print("\nPaíses con 'land':")
+countries = ["Finland", "Switzerland", "Iceland", "Thailand"]
+for country in countries:
+    if "land" in country:
+        print(country)
+Z
+print("\nFrutas en orden inverso:")
+fruits = ['Watermelon', 'Orange', 'Melon', 'Lemon']
+for fruit in reversed(fruits):
+    print(fruit)
